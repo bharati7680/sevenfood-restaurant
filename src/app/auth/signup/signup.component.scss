@@ -1,0 +1,76 @@
+.signup{
+    width: 500px;
+    height: 620px;
+    margin: 30px 500px;
+    background-color: rgb(244, 194, 194);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:cadetblue;
+    border-radius: 20px;
+    // padding: 10px;
+    // border-radius: 3px;
+  }
+  .signup-box{
+    width: 400px;
+    height: 100%;
+    // border: 1px solid gainsboro;
+    // margin-top: 20px;
+    padding-left: 70px;
+
+  }
+  h1 {
+    text-align: center;
+    padding-top: 20px;
+    padding-right: 60px;
+
+  }
+  label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+  }
+  button{
+    width: 320px;
+    // margin-left: 10px;
+    margin-top: 20px;
+    padding: 5px;
+    border: 1px solid gray;
+    background-color: darksalmon;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    color:black;
+    font-weight: 700;
+    // padding-left: 55px;
+
+
+  }
+  .para{
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    // padding: 10px;
+  }
+  .para a {
+    color: #ca2564;
+    font-weight: 700;
+  }
+  p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+    padding-right: 80px;
+
+  }
+  
+  
+
