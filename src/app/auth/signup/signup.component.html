@@ -1,27 +1,32 @@
-<div class="signup">
+<div class="box">
+  <div class="signup">
     <div class="signup-box">
         <h1>SignUp</h1>
-        <label>First Name</label>
-        <input type="text" placeholder="" />
-        <label>Last Name</label>
-        <input type="text" placeholder="" />
-        <label>Email</label>
-        <input type="email" placeholder="" />
-        <label>Password</label>
-        <input type="password" placeholder="" />
-        <label>Confirm Password</label>
-        <input type="password" placeholder="" />
-        <button class="button">Submit</button>
+        <form [formGroup]="signupForm">
+          <label>First Name</label>
+          <input formControlName="firstName" type="text" placeholder="" />
+          <label>Last Name</label>
+          <input formControlName="lastName" type="text" placeholder="" />
+          <label>Email</label>
+          <input formControlName="email" type="email" placeholder="" />
+          <label>Password</label>
+          <input formControlName="password" type="password" placeholder="" />
+          <label>Confirm Password</label>
+          <input formControlName="confirmPassword" type="password" placeholder="" />
+          <button (click)="signUp()" class="button">Submit</button>
+        </form>
       <p>
         By clicking the Sign Up button,you agree to our <br />
         <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
       </p>
   
       <p class="para">
-          Already have an account? <a routerLink="//src/app/auth/login/login.component.html">Login here</a>
+          Already have an account? <a routerLink="/authentication/login">Login here</a>
       </p>
      
     </div>
     
   </div>
   
+
+</div>
