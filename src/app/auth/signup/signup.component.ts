@@ -9,11 +9,11 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class SignupComponent implements OnInit {
 
   signupForm = this.fb.group({
-    firstName: [''],
-    lastName: [''],
+    firstName: ['', Validators.compose([Validators.required])],
+    lastName: ['', Validators.compose([Validators.required])],
     email: ['', Validators.compose([Validators.required, Validators.email])],
-    password: [''],
-    confirmPassword: ['']
+    password: ['', Validators.compose([Validators.required, Validators.minLength(8)])],
+    confirmPassword: ['', Validators.compose([Validators.required, Validators.minLength(8)])]
   }) 
 
   constructor(private fb: FormBuilder) { 
