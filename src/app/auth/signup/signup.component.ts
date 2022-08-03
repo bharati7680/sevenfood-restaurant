@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { response } from 'express';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -9,14 +11,12 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class SignupComponent implements OnInit {
 
   signupForm = this.fb.group({
-    firstName: ['', Validators.compose([Validators.required])],
-    lastName: ['', Validators.compose([Validators.required])],
     email: ['', Validators.compose([Validators.required, Validators.email])],
-    password: ['', Validators.compose([Validators.required, Validators.minLength(8)])],
-    confirmPassword: ['', Validators.compose([Validators.required, Validators.minLength(8)])]
+    password: ['', Validators.compose([Validators.required, Validators.minLength(4)])],
+    confirmPassword: ['', Validators.compose([Validators.required, Validators.minLength(4)])]
   }) 
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder, private authService: AuthService) { 
 
   }
 
@@ -24,7 +24,29 @@ export class SignupComponent implements OnInit {
   }
 
   signUp() {
-    console.log(this.signupForm)
+    if (!this.signupForm.valid){
+      alert("please enter all fields")
+      return
+    }
+    const email = this.signupForm.get('email')!.value
+    const password = this.signupForm.get('password')!.value
+    const confirmPassword = this.signupForm.get('confirmPassword')!.value
+
+    if( password !== confirmPassword ){
+      alert("password does not match")
+      return
+    }
+
+    this.authService.signup(email || "" , password || "").subscribe(
+      (response: any) => {
+        console.log(response)
+
+      },
+      (error: any) => {
+        console.log(error)
+      }
+      
+    )
     
   }
 
