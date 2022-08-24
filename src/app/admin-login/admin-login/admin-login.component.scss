@@ -1,0 +1,58 @@
+.login {
+    // margin: 80px 550px;
+    background-color: rgb(175, 196, 241);
+    width: 400px;
+    height: 500px; 
+    display: block;
+    justify-content: center;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 15px 15px 20px  #aca9a9;
+    text-align: center;
+        // flex-direction: column;
+    // row-gap: 20px;
+    
+    
+}
+.adminLog {
+    width: 400px;
+    color: rgb(234, 239, 239);
+    background-color: #3790f5;
+    padding: 30px;
+    
+
+  }
+
+  .fpwd{
+    margin-top: 30px;
+    font-weight: 700;
+  }
+
+input {
+    width: 300px;
+    padding: 8px;
+    margin-top: 50px;
+    margin-left: 50px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    outline: none;
+    text-align: center;
+  }
+
+
+
+button{
+    width: 200px;
+    margin-top: 50px;
+    padding: 10px;
+    border: 1px solid gray;
+    background-color: rgb(89, 144, 233);
+    border-radius: 20px;
+    // outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    color:black;
+    font-weight: 700;
+    
+
+}

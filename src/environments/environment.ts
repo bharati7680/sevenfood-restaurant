@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API_URL: "https://cbcb-103-69-88-14.in.ngrok.io"
+  API_URL: "http://restapi.adequateshop.com"
 };
 
 /*

@@ -1,25 +1,27 @@
-<div class="login">
-        <div class="d-flex flex-column justify-content-center">
-                <h1 class="fs-3 fw-bolder">Login</h1>
-                <form [formGroup]="loginForm">
-                        <div>
-                                <input formControlName="email" type="email" placeholder=" Email" />
 
-                        </div>
-                        <div>
-                                <input formControlName="password" type="password" placeholder="Password" />
-                        </div>
-                        <div>
-                                <a class="paraa" href="#">Forgot Password?</a>
-
-                        </div>
-                        <button (click)="login()" class="button">Login</button>
-                </form>
-
-                <p class="para">
-                        Not have an account?<a routerLink="/authentication/signup">Create account</a>
-                </p>
+        <div class="login">
+                <div class="d-flex flex-column justify-content-center">
+                        <h1 class="fs-3 fw-bolder">Login</h1>
+                        <form [formGroup]="loginForm">
+                                <div>
+                                        <input formControlName="email" type="email" placeholder=" Email" />
+        
+                                </div>
+                                <div>
+                                        <input formControlName="password" type="password" placeholder="Password" />
+                                </div>
+                                <div>
+                                        <a class="paraa" href="#">Forgot Password?</a>
+        
+                                </div>
+                                <button (click)="login()" class="button">Login</button>
+                        </form>
+        
+                        <p class="para">
+                                Not have an account?<a routerLink="/authentication/signup">Create account</a>
+                        </p>
+                </div>
+        
+        
         </div>
-
-
-</div>
+        

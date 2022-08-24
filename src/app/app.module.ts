@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { AdminLoginComponent } from './admin-login/admin-login/admin-login.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { HeaderComponent } from './shared/header/header.component';
     AppComponent,
     HeaderComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    AdminPanelComponent,
+    AdminLoginComponent
     
   ],
   imports: [

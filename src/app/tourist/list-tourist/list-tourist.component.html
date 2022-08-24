@@ -1,0 +1,20 @@
+<div class="table-responsive-lg" *ngIf="touristData">
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Tourist_email</th>
+            <th scope="col">Tourist_location</th>
+            <th scope="col">Tourist_name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tourist of touristData.data">
+            <td>{{tourist.id}}</td>
+            <td>{{tourist.tourist_email}}</td>
+            <td>{{tourist.tourist_location}}</td>
+            <td>{{tourist.tourist_name}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
